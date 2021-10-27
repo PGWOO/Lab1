@@ -1,22 +1,22 @@
-# Lab1
-def add(x,y):
-    return x + y
+import telegram
+from telegram.ext import Updater
+from telegram.ext import MessageHandler, Filters
 
-def subtract(x, y):
-    return x - y
+token = '2051708541:AAFsj4ZPk_3p42OsAcaNxcjAdKzFzvNMawg'
+id = '2072012352'
 
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
+bot = telegram.Bot(token)
 
-choice = input("Enter choice(1/2): ")
+# updater
+updater = Updater(token=token, use_context=True)
+dispatcher = updater.dispatcher
+# 봇
+updater.start_polling()
 
-num1 = float(input("첫번째 숫자를 입력하시오: "))
-num2 = float(input("두번째 숫자를 입력하시오: "))
 
-if choice == '1':
-    print(num1,"+",num2,"=",add(num1,num2))
-elif choic == '2':
-    print(num1,"-",num2,"=",subtract(num1,num2))
-else:
-    print("틀린 입력을 하였습니다.")
+def handler(update, context):
+    user_text = update.message.text
+    if user_text == "서울 확진자 수 알려줘":
+        bot.send_message(chat_id=id, text="확진자 수")
+    elif user_text == "코로나 최근 뉴스 알려줘":
+        bot.send_message(chat_id=id, text="뉴스기사링크")
