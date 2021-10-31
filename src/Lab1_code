@@ -1,0 +1,44 @@
+import telegram
+from telegram.ext import Updater
+from telegram.ext import MessageHandler, Filters
+
+import tkinter.messagebox as msgbox
+from tkinter import *
+
+win = Tk()
+win.geometry("300x100")
+win.title("코로나 확진자 방문 여부")
+win.option_add("*Font","25")
+
+label1 = Label(win, text = '수용가능인원 : 30')
+label1.pack()
+
+now = 12 # 블루투스를 이용해 확인된 매장 방문 인원수
+label2 = Label(win, text = '현재인원 : %d' %now)
+label2.pack()
+
+# 블루투스를 이용해 입력받은 코로나 확진자 여부 (1234 = 확진자)
+guest_check = 1234 # 확진자 방문했다고 가정
+
+if guest_check == 1234:
+    msgbox.showinfo('알림', '코로나 확진자 방문')
+
+win.mainloop()
+
+token = '2051708541:AAFsj4ZPk_3p42OsAcaNxcjAdKzFzvNMawg'
+id = '2072012352'
+
+bot = telegram.Bot(token)
+
+updater = Updater(token=token, use_context=True)
+dispatcher = updater.dispatcher
+
+updater.start_polling()
+
+if guest_check == 1234:
+        bot.send_message(chat_id=id, text="코로나 확진자 방문")
+
+echo_handler = MessageHandler(Filters.text, handler)
+dispatcher.add_handler(echo_handler)
+
+
