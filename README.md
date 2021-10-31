@@ -46,5 +46,12 @@ from tkinter import *
 * tkinter : To implement the GUI
 * telegram : To implement the chatbot
 
+<br>
+
+## Information
+박건우 - tkddlfehd111@gmail.com
+XYZ 라이센스를 준수하며 LICENSE에서 자세한 정보를 확인할 수 있습니다.
+https://github.com/PGWOO
+
   
  
