@@ -11,10 +11,10 @@
 1. socket을 통해 입력받은 방문자 확진여부 판정
 2. 확진판정시, telegram의 Chat Bot으로 매장주인에게 알림
 
-<br>
 
 ### Chat Bot Image
 ![ChatBotImage](https://github.com/PGWOO/Lab1/blob/main/ChatBotFrofile.png)
+![ChatBotImage](https://github.com/PGWOO/Lab1/blob/main/ChatBotsend.png)
 
 ## GUI system
 코로나 확진자가 방문했을 시, 매장내 모니터에 경고 알림창을 띄운다.
