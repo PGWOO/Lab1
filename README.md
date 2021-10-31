@@ -14,7 +14,7 @@
 <br>
 
 ### Chat Bot Image
-![Chat Bot Image](https://github.com/PGWOO/Lab1/issues/1)
+![ChatBotImage](https://github.com/PGWOO/Lab1/blob/main/ChatBotFrofile.png)
 
 ## GUI system
 코로나 확진자가 방문했을 시, 매장내 모니터에 경고 알림창을 띄운다.
